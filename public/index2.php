@@ -1,19 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kwilliams
- * Date: 10/1/18
- * Time: 9:23 PM
- */
 main::start("example.csv");
 class main  {
     static public function start($filename) {
         $records = csv::getRecords($filename);
         $table = html::generateTable($records);
+
     }
 }
 class html {
-    public static void function generateTable($records) {
+    public static function generateTable($records) {
         $count = 0;
         foreach ($records as $record) {
             if($count == 0) {
